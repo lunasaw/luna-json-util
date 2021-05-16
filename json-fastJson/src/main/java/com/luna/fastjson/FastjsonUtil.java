@@ -21,7 +21,7 @@ import java.util.List;
  * 数据量高于1万的时候速度有绝对优势
  * API简洁
  * 
- * @author duanxinyuan
+ * @author czy1024
  * 2018/6/28 22:55
  */
 public class FastjsonUtil {

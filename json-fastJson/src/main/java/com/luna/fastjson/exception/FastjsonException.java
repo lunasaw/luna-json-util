@@ -3,7 +3,7 @@ package com.luna.fastjson.exception;
 import exception.FormativeException;
 
 /**
- * @author duanxinyuan
+ * @author czy1024
  * 2019/4/10 22:35
  */
 public class FastjsonException extends FormativeException {

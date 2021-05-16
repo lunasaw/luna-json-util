@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 /**
  * Gson解析的Number类型的字段解析适配器
  * 
- * @author duanxinyuan
+ * @author czy1024
  * 2018/6/20 14:58
  */
 public class NumberTypeAdapter<T> extends TypeAdapter<Number> {

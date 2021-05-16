@@ -7,16 +7,14 @@
     <groupId>com.github.czy1024</groupId>
     <artifactId>json-util</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.2-RELEASE</version>
     <modules>
         <module>json-exception</module>
         <module>json-fastJson</module>
         <module>json-gson</module>
-        <!--        <module>json-fastjson</module>-->
-        <!--        <module>json-gson</module>-->
-        <!--        <module>json-jackson</module>-->
-        <!--        <module>json-jackson-extend</module>-->
-        <!--        <module>json-jackson-scala</module>-->
+        <module>json-jackson</module>
+        <module>json-jackson-extend</module>
+        <module>json-jackson-scala</module>
     </modules>
 
     <licenses>
@@ -129,7 +127,7 @@
             <dependency>
                 <groupId>com.github.czy1024</groupId>
                 <artifactId>json-exception</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>1.0.2-RELEASE</version>
             </dependency>
 
             <!--Gson-->

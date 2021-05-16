@@ -1,11 +1,11 @@
 package com.luna.gson.exception;
 
-import com.luna.library.exception.FormativeException;
+import exception.FormativeException;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author duanxinyuan
+ * @author czy1024
  * 2019/4/10 22:35
  */
 @Setter

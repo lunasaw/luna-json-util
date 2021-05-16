@@ -1,11 +1,11 @@
 package com.luna.gson;
 
-import com.luna.library.json.gson.adapter.NumberTypeAdapter;
-import com.luna.library.json.gson.exception.GsonException;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.luna.gson.adapter.NumberTypeAdapter;
+import com.luna.gson.exception.GsonException;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -22,8 +22,8 @@ import java.util.*;
  * API和注解支持较为完善，支持宽松解析
  * 支持的数据源较广泛（字符串，对象，文件、流）
  * 
- * @author duanxinyuan
- * 2015/5/27 16:53
+ * @author czy1024
+ * 2020/5/27 16:53
  */
 public class GsonUtil {
     private static Gson gson;
