@@ -18,9 +18,10 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 import com.google.common.collect.Sets;
 import com.luna.jackson.exception.JacksonException;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -42,8 +43,10 @@ import java.util.*;
  * @author duanxinyuan
  * 2018/6/28 23:24
  */
-@Slf4j
 public class JacksonUtil {
+        private static final Logger log = LoggerFactory.getLogger(JacksonUtil.class);
+
+
     private static ObjectMapper               mapper;
 
     private static final Set<JsonReadFeature> JSON_READ_FEATURES_ENABLED = Sets.newHashSet(

@@ -7,7 +7,7 @@
     <groupId>com.github.czy1024</groupId>
     <artifactId>json-util</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2-RELEASE</version>
+    <version>1.0.3-RELEASE</version>
     <modules>
         <module>json-exception</module>
         <module>json-fastJson</module>
@@ -70,11 +70,6 @@
             <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
@@ -114,7 +109,7 @@
             <dependency>
                 <groupId>com.github.czy1024</groupId>
                 <artifactId>json-exception</artifactId>
-                <version>1.0.2-RELEASE</version>
+                <version>1.0.3-RELEASE</version>
             </dependency>
 
             <!--Gson-->
