@@ -6,7 +6,7 @@
 
 ```xml
 <dependency>
-    <groupId>com.github.czy1024</groupId>
+    <groupId>io.github.lunasaw</groupId>
     <artifactId>json-fastjson</artifactId>
 </dependency>
 ```

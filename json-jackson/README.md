@@ -7,7 +7,7 @@
 ```xml
 
 <dependency>
-    <groupId>com.github.czy1024</groupId>
+    <groupId>io.github.lunasaw</groupId>
     <artifactId>json-jackson</artifactId>
 </dependency>
 ```
@@ -25,7 +25,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * @author czy1024
+ * @author lunasaw
  * 2019/1/21 18:17
  */
 public class JacksonTest {

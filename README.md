@@ -8,31 +8,31 @@ Json工具类, 包含Gson、FastJson、Jackson三个库的工具类，其中Jack
 
 <dependencies>
     <dependency>
-        <groupId>com.github.czy1024</groupId>
+        <groupId>io.github.lunasaw</groupId>
         <artifactId>json-fastjson</artifactId>
         <version>1.0.1-RELEASE</version>
     </dependency>
 
     <dependency>
-        <groupId>com.github.czy1024</groupId>
+        <groupId>io.github.lunasaw</groupId>
         <artifactId>json-gson</artifactId>
         <version>1.0.1-RELEASE</version>
     </dependency>
 
     <dependency>
-        <groupId>com.github.czy1024</groupId>
+        <groupId>io.github.lunasaw</groupId>
         <artifactId>json-jackson</artifactId>
         <version>1.0.1-RELEASE</version>
     </dependency>
 
     <dependency>
-        <groupId>com.github.czy1024</groupId>
+        <groupId>io.github.lunasaw</groupId>
         <artifactId>json-jackson-extend</artifactId>
         <version>1.0.1-RELEASE</version>
     </dependency>
 
     <dependency>
-        <groupId>com.github.czy1024</groupId>
+        <groupId>io.github.lunasaw</groupId>
         <artifactId>json-jackson-scala</artifactId>
         <version>1.0.1-RELEASE</version>
     </dependency>

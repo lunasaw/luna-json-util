@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.czy1024</groupId>
+    <groupId>io.github.lunasaw</groupId>
     <artifactId>json-util</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.3-RELEASE</version>
+    <version>1.1.0-RELEASE</version>
     <modules>
         <module>json-exception</module>
         <module>json-fastJson</module>
@@ -25,14 +25,14 @@
     </licenses>
 
     <name>json-util</name>
-    <url>https://github.com/czy1024/luna-json-util</url>
+    <url>https://github.com/lunasaw/luna-json-util</url>
     <description>Json工具类, 包含Gson、FastJson、Jackson三个库的工具类，其中Jackson支持Scala版本</description>
 
     <developers>
         <developer>
             <name>luna</name>
             <email>iszychen@gmail.com</email>
-            <url>https://github.com/czy1024</url>
+            <url>https://github.com/lunasaw</url>
         </developer>
     </developers>
 
@@ -105,11 +105,12 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+
             <!--支持类似Log4j输入的自定义Exception库-->
             <dependency>
-                <groupId>com.github.czy1024</groupId>
+                <groupId>io.github.lunasaw</groupId>
                 <artifactId>json-exception</artifactId>
-                <version>1.0.3-RELEASE</version>
+                <version>1.1.0-RELEASE</version>
             </dependency>
 
             <!--Gson-->
@@ -139,23 +140,108 @@
 
 
     <distributionManagement>
+<!--        <repository>-->
+<!--            <id>ossrh</id>-->
+<!--            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>ossrh</id>-->
+<!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>-->
+<!--        </snapshotRepository>-->
+        <!-- 两个ID必须与setting.xml中的<server><id>nexus-releases</id></server>保持一致-->
         <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://localhost:8082/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://localhost:8082/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
 
     <scm>
-        <url>https://github.com/czy1024/luna-json-util</url>
-        <connection>scm:git:https://github.com/czy1024/luna-json-util.git</connection>
-        <developerConnection>scm:git:https://github.com/czy1024/luna-json-util</developerConnection>
+        <url>https://github.com/lunasaw/luna-json-util</url>
+        <connection>scm:git:https://github.com/lunasaw/luna-json-util.git</connection>
+        <developerConnection>scm:git:https://github.com/lunasaw/luna-json-util</developerConnection>
     </scm>
     <profiles>
+        <profile>
+            <id>nexus-releases</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <version>2.3.2</version>
+                        <configuration>
+                            <autoVersionSubmodules>true</autoVersionSubmodules>
+                            <useReleaseProfile>false</useReleaseProfile>
+                            <releaseProfiles>release</releaseProfiles>
+                            <goals>deploy</goals>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.0</version>
+                        <configuration>
+                            <source>1.8</source>
+                            <target>1.8</target>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.9.1</version>
+                        <configuration>
+                            <javadocExecutable>${java.home}/../bin/javadoc</javadocExecutable>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>ossrh</id>
             <activation>

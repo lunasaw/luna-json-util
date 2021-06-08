@@ -4,7 +4,7 @@ import exception.FormativeException;
 
 
 /**
- * @author czy1024
+ * @author lunasaw
  * 2019/4/10 22:35
  */
 public class GsonException extends FormativeException {

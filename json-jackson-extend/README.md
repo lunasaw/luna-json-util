@@ -7,7 +7,7 @@
 ```xml
 
 <dependency>
-    <groupId>com.github.czy1024</groupId>
+    <groupId>io.github.lunasaw</groupId>
     <artifactId>json-jackson-extend</artifactId>
 </dependency>
 ```
@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * @author czy1024
+ * @author lunasaw
  * 2020/1/13 21:25
  */
 public class JacksonExtendUtilTest {

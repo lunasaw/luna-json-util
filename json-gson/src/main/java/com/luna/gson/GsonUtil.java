@@ -22,7 +22,7 @@ import java.util.*;
  * API和注解支持较为完善，支持宽松解析
  * 支持的数据源较广泛（字符串，对象，文件、流）
  * 
- * @author czy1024
+ * @author lunasaw
  * 2020/5/27 16:53
  */
 public class GsonUtil {

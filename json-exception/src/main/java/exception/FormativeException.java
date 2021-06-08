@@ -5,7 +5,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 /**
  * 支持格式化字符串的自定义运行时异常
  * 
- * @author czy1024
+ * @author lunasaw
  * 2019/4/10 22:35
  */
 public class FormativeException extends RuntimeException {
