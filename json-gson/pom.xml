@@ -5,12 +5,12 @@
     <parent>
         <artifactId>json-util</artifactId>
         <groupId>io.github.lunasaw</groupId>
-        <version>1.1.0-RELEASE</version>
+        <version>1.1.1-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>json-gson</artifactId>
-    <version>1.1.0-RELEASE</version>
+    <version>1.1.1-RELEASE</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
